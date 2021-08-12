@@ -19,5 +19,5 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ola_danjo', views.lita_eventos)
+    path('ola_django', views.lita_eventos)
 ]

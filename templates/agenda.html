@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>agenda</title>
+    <title>ola_django</title>
 </head>
 <body>
     <h2>agendamentos</h2>
+
+    <ul>
+    {% for evento in eventos %}
+        <li>{{eventos.titulo}} - {{eventos.data_eventos}}</li>
+    {% endfor %}
+    </ul>
 </body>
 </html>
