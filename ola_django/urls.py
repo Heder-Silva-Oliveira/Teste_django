@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('ola_django', views.lita_eventos),
     path('', RedirectView.as_view(url='/ola_django/')),
+    path('login/', views.login_user)
 ]
