@@ -5,9 +5,14 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def index(request):
-    return redirect('/ola_django')
+    return redirect('/agenda')
 
-@login_required()
+
+def login_user(request):
+    render(request, 'login.html')
+
+
+@login_required(login_url='/login/')
 def lita_eventos(request):
     evento = Evento.objects.all()
     dados = {'eventos', evento}

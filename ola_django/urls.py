@@ -20,7 +20,7 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ola_django', views.lita_eventos),
-    path('', RedirectView.as_view(url='/ola_django/')),
+    path('agenda', views.lita_eventos),
+    path('', RedirectView.as_view(url='/agenda/')),
     path('login/', views.login_user)
 ]
