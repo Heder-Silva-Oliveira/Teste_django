@@ -18,9 +18,13 @@ from django.urls import path
 from core import views
 from django.views.generic import RedirectView
 
+handler404 = views.handler404
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('agenda', views.lita_eventos),
+    path('agenda/', views.lista_eventos),
     path('', RedirectView.as_view(url='/agenda/')),
-    path('login/', views.login_user)
+    path('login/', views.login_user),
+    path('login/submit', views.submit_login),
+    path('logout/', views.logout_user)
 ]
