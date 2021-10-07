@@ -44,8 +44,7 @@ def lista_eventos(request):
 def lista_eventos_historico(request):
     usuario = request.user
     data_atual = datetime.now()
-    evento = Evento.objects.filter(usuario=usuario,
-                                   data_evento__lt=data_atual)
+    evento = Evento.objects.filter(usuario=usuario, data_evento__lt=data_atual)
     dados = {'eventos':evento}
     return render(request, 'historico.html', dados)
 
